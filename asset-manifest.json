@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/CONFETTI/static/css/main.7acaea2f.css",
-    "main.js": "/CONFETTI/static/js/main.07d3183d.js",
+    "main.js": "/CONFETTI/static/js/main.a00eaaab.js",
     "index.html": "/CONFETTI/index.html",
     "main.7acaea2f.css.map": "/CONFETTI/static/css/main.7acaea2f.css.map",
-    "main.07d3183d.js.map": "/CONFETTI/static/js/main.07d3183d.js.map"
+    "main.a00eaaab.js.map": "/CONFETTI/static/js/main.a00eaaab.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.07d3183d.js"
+    "static/js/main.a00eaaab.js"
   ]
 }
