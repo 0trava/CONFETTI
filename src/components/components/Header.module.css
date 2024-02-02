@@ -1,0 +1,66 @@
+/* Mobile */
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.logo_link{
+    cursor: pointer;
+    
+}
+
+.logo_link:hover .logo, .logo_link:focus .logo{
+    transform: scale(1.05);
+}
+
+.logo {
+    transition: 0.3s linear;
+}
+
+.menu__full_box {
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s linear;
+}
+
+.menu_hover {
+    display: none;
+    transition: all 0.3s linear;
+}
+
+
+.menu__full_box:hover .menu_hover, .menu__full_box:focus .menu_hover {
+    display: flex;
+    transform: scale(1.05);
+}
+
+.menu__full_box:hover .menu, .menu__full_box:focus .menu {
+    display: none;
+}
+
+
+
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+
+
+
+
+  }
+  
+
+
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    .header {
+        margin-top: 37px;
+        margin-left: 112px;
+        margin-right: 112px;
+        width: 1200px;
+    }
+  }
