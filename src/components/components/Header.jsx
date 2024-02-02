@@ -9,7 +9,7 @@ import MenuFull_hover from '../../assets/images/menu_hover.png';
 
 const Header = () => {
   return (
-    <div className={style.header}>
+    <div className={style.container}>
             {/* Logo */}
             <a href="/" className={style.logo_link}>
               <img className={style.logo} src={Logo} alt="logo" />

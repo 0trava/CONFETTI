@@ -2,11 +2,29 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  position: relative;
+
+  font-family: 'Inter', sans-serif;
+  font-family: 'Manrope', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Gilroy-Bold', sans-serif;
+  font-family: 'Gilroy-Heavy', sans-serif;
+  font-family: 'Gilroy-Light', sans-serif;
+  font-family: 'Gilroy-Medium', sans-serif;
+  font-family: 'Gilroy-Regular', sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Anzeigen-Grotesk";
+  src: url("https://db.onlinewebfonts.com/t/9f6eb05cf4587ebc95acfbd41081a71b.eot");
+  src: url("https://db.onlinewebfonts.com/t/9f6eb05cf4587ebc95acfbd41081a71b.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/9f6eb05cf4587ebc95acfbd41081a71b.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/9f6eb05cf4587ebc95acfbd41081a71b.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/9f6eb05cf4587ebc95acfbd41081a71b.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/9f6eb05cf4587ebc95acfbd41081a71b.svg#Anzeigen Grotesk W04 Regular")format("svg");
 }
 
 code {

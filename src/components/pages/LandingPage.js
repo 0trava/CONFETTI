@@ -31,12 +31,13 @@ const LandingPage = () => {
   return (
     <div>
       <Header isScrolled={isScrolled} />
-      <BurgerMenu />
+      
       <Hero />
       <AboutUs />
       <Reviews />
       <Contacts />
       <Footer />
+      <BurgerMenu />
     </div>
   );
 };
