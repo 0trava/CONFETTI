@@ -1,0 +1,39 @@
+.formContainer {
+
+  }
+  
+  .formItem {
+    margin-bottom: 15px;
+  }
+  
+  .formInput {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+  }
+  
+  .formTextarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  .formButton {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .formButton:hover {
+    background-color: #45a049;
+  }
+  
