@@ -1,0 +1,162 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.title {
+    font-size: 56px;
+    font-weight: 500;
+    line-height: 44px;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    font-family: Anzeigen-Grotesk;
+    text-transform: uppercase;
+    color:  #ED4B5E;  
+
+    margin-bottom: 24px;
+    margin-top: 80px;
+}
+
+.post_title {
+    font-family: Anzeigen-Grotesk;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color:  #222222; 
+}
+
+.contact_list {
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: -0.01em;
+    text-align: center;
+    color: #565148;
+
+    margin-bottom: 88px;
+}
+
+.contact_list li p {
+    height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.contact_list li {
+    margin-top: 16px;
+}
+
+
+
+.contact_list li:nth-child(1) p::before {
+ content: '';
+ background-image: url(../../assets/images/call.svg);
+ background-size: cover;
+ width: 24px;
+ height: 24px;
+ fill: #565148;
+ margin-right: 8px; 
+ display: inline-block;
+}
+
+.contact_list li:nth-child(2) p::before {
+    content: '';
+    background-image: url(../../assets/images/sms.svg);
+    background-size: cover;
+    width: 24px;
+    height: 24px;
+    fill: #565148;
+    margin-right: 8px; 
+    display: inline-block;
+   }
+
+
+.form_block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 569px;
+    padding: 51px, 20px, 51px, 20px;
+    background: #FFEFF0;
+
+    margin-top: 36px;
+}
+
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+
+.form_block {
+    width: 608px;
+    height: 634px;
+    padding: 57px, 83px, 56px, 82px;
+    border-radius: 24px;    
+    background: #FFEFF0;
+    z-index: 3;
+    margin: 0;
+    position: relative;
+
+}
+
+.ballon1 {
+    position: absolute;
+    background-image: url('../../assets/images/hero_ballons1_desk.png');
+    background-size: cover;
+    z-index: 1;
+    /* overflow: visible; */
+
+    width: 412.44px;
+    height: 419.77px;
+    top: -98px;
+    left: -131px;
+    transform: rotate(-40deg);
+
+
+}
+
+.ballon2 {
+    position: absolute;
+    background-image: url('../../assets/images/hero_ballons2_desk.png');
+    background-size: cover;
+    z-index: 1;
+    /* overflow: visible; */
+
+    width: 343px;
+    height: 349px;
+    top: 157px;
+    right: -109px;
+    transform: rotate(-9deg);
+
+
+}
+
+
+
+
+}
+
+
+
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+}
+
