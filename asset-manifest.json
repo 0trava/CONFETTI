@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/CONFETTI/static/css/main.9987b703.css",
-    "main.js": "/CONFETTI/static/js/main.6e60f217.js",
+    "main.css": "/CONFETTI/static/css/main.c7cdf690.css",
+    "main.js": "/CONFETTI/static/js/main.5ff049a9.js",
     "static/media/hero_background_dsk.png": "/CONFETTI/static/media/hero_background_dsk.efa187aed0c99f7da2ae.png",
     "static/media/hero_ballons2_desk.png": "/CONFETTI/static/media/hero_ballons2_desk.436606561cdd254e04d9.png",
     "static/media/hero_ballons1_desk.png": "/CONFETTI/static/media/hero_ballons1_desk.7dc214f7aa53b6012e66.png",
     "index.html": "/CONFETTI/index.html",
-    "main.9987b703.css.map": "/CONFETTI/static/css/main.9987b703.css.map",
-    "main.6e60f217.js.map": "/CONFETTI/static/js/main.6e60f217.js.map"
+    "main.c7cdf690.css.map": "/CONFETTI/static/css/main.c7cdf690.css.map",
+    "main.5ff049a9.js.map": "/CONFETTI/static/js/main.5ff049a9.js.map"
   },
   "entrypoints": [
-    "static/css/main.9987b703.css",
-    "static/js/main.6e60f217.js"
+    "static/css/main.c7cdf690.css",
+    "static/js/main.5ff049a9.js"
   ]
 }
