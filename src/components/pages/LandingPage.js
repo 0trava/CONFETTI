@@ -38,6 +38,7 @@ const LandingPage = () => {
       <Header isScrolled={isScrolled} toggleBurgerMenu={toggleBurgerMenu} />
       <Hero />
       <AboutUs />
+      
       <Reviews />
       <Contacts />
       <Footer />

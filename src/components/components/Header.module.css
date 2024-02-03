@@ -64,8 +64,9 @@
 @media screen and (min-width: 1200px) {
     .container {
         margin-top: 37px;
-        margin-left: 112px;
-        margin-right: 112px;
-        width: 1200px;
+        padding-left: 112px;
+        padding-right: 112px;
+        width: 100%;
+        /* width: 1200px; */
     }
   }
