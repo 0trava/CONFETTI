@@ -4,7 +4,7 @@
     width: 100%;
     height: 494px;
     background-color: #FFFDF9;   
-    /* position: relative; */
+    position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -27,6 +27,7 @@
     top: 272px;
     right: -50px;
     rotate: -16;
+    overflow: hidden;
 
     
 }

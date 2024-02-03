@@ -17,15 +17,15 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    width: 700px;
+    width: 320px;
 
 }
 
 
 .title {
-    font-size: 56px;
+    font-size: 36px;
     font-weight: 500;
-    line-height: 44px;
+    line-height: 28px;
     letter-spacing: -0.01em;
     text-align: center;
 
@@ -37,14 +37,14 @@
 
 .title_box p {
     font-family: Inter;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
-    line-height: 29px;
+    line-height: 28px;
     letter-spacing: -0.01em;
     text-align: center;
 
-    margin-top: 24px;
-    margin-bottom: 64px;
+    margin-top: 16px;
+    margin-bottom: 36px;
 
 }
 
@@ -109,6 +109,51 @@
     pointer-events: none;
 
 }
+
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+    .title_box {
+        width: 584px;    
+    }
+
+    .title {
+        font-size: 48px;
+        line-height: 37px;
+    }
+
+    .title_box p {
+        font-size: 24px;
+        line-height: 33px;
+    
+        margin-top: 16px;
+        margin-bottom: 48px;
+    }
+
+}
+    
+    
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    .title_box {
+        width: 700px;    
+    }
+
+    .title {
+        font-size: 56px;
+        line-height: 44px;
+    }
+
+    .title_box p {
+        font-size: 24px;
+        line-height: 29px;
+    
+        margin-top: 24px;
+        margin-bottom: 64px;
+    }
+
+}
+
 
 
 
