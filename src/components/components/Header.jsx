@@ -7,7 +7,11 @@ import MenuFull from '../../assets/images/menu.png';
 import MenuFull_hover from '../../assets/images/menu_hover.png';
 // import MenuIcon from '../../assets/images/menu_icon.png';
 
-const Header = () => {
+const Header = ({ isScrolled, toggleBurgerMenu }) => {
+  console.log(isScrolled);
+
+
+
   return (
     <div className={style.container}>
             {/* Logo */}
@@ -17,12 +21,10 @@ const Header = () => {
 
 
             {/* Menu */}
-            <div className={style.menu__full_box}>
+            <div onClick={toggleBurgerMenu} className={style.menu__full_box}>
                <img className={style.menu} src={MenuFull} alt="MenuFull icon" />
                <img className={style.menu_hover} src={MenuFull_hover} alt="MenuFull icon hover" />
             </div>
-
-
     </div>
   )
 }

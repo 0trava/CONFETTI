@@ -12,7 +12,7 @@ const Hero = () => {
         <img className={style.background} src={Background} alt="bullon1" />
 
       <div className={style.title_box}>
-      <h1 className={style.title}> Tworzymy unikalne i niepowtarzalne dekoracje balonowe na imprezy</h1>
+      <h1 className={style.title}> Tworzymy unikalne <br/>i niepowtarzalne <br/><span> dekoracje balonowe</span> <br/>na imprezy</h1>
       </div>
 
 

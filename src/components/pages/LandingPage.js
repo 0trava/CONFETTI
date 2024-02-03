@@ -10,6 +10,7 @@ import React, { useState, useEffect } from 'react';
 
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,16 +29,21 @@ const LandingPage = () => {
     };
   }, []);
 
+  const toggleBurgerMenu = () => {
+    setBurgerMenuOpen(!burgerMenuOpen);
+  };
+
   return (
     <div>
-      <Header isScrolled={isScrolled} />
+      <Header isScrolled={isScrolled} toggleBurgerMenu={toggleBurgerMenu} />
       
       <Hero />
       <AboutUs />
       <Reviews />
       <Contacts />
       <Footer />
-      <BurgerMenu />
+
+       {burgerMenuOpen && <BurgerMenu toggleBurgerMenu={toggleBurgerMenu} />}
     </div>
   );
 };
