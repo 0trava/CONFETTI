@@ -3,7 +3,11 @@
   }
   
   .formItem {
-    margin-bottom: 15px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
   }
   
   .formInput {
@@ -24,16 +28,29 @@
   }
   
   .formButton {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+    width: 443px;
+    height: 80px;
+    padding: 24px, 32px, 24px, 32px;
+    border-radius: 24px;
+    gap: 10px;
+    background: #ED4B5E;
+
+    
     cursor: pointer;
+
+    font-family: Anzeigen-Grotesk;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    text-align: center;
+
   }
-  
-  .formButton:hover {
-    background-color: #45a049;
+
+.ant-btn.ant-btn-primary.css-dev-only-do-not-override-1rqnfsa:hover {
+      background-color: #ff0000 !important;
+      color: #000 !important;
   }
+
+
   

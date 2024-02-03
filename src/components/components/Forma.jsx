@@ -1,60 +1,59 @@
 import React, { useState } from 'react';
 import { Form, Input, Button, Alert } from 'antd';
-import { useForm } from 'react-hook-form';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import style from './Forma.module.css';
 
-const validateEmail = (email) => {
-    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return re.test(email);
-  };
-  
-  const validateMessage = (message) => {
-    return message.length > 0;
-  };
-  
-  const Forma = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    const [submitted, setSubmitted] = useState(false);
-    const [errorMessage, setErrorMessage] = useState('');
-  
-    const onSubmit = (data) => {
-      if (!validateEmail(data.email)) {
-        setErrorMessage('Invalid email format');
-        return;
-      }
-  
-      if (!validateMessage(data.message)) {
-        setErrorMessage('Message cannot be empty');
-        return;
-      }
-  
-      setSubmitted(true);
-    };
-  
-    return (
-        <Form onSubmit={handleSubmit(onSubmit)} className={style.formContainer}>
-        <Form.Item label="Name" className={style.formItem}>
-          <Input {...register('name', { required: true })} className={style.formInput} />
-          {errors.name && <Alert message="Name is required" type="error" />}
-        </Form.Item>
-        <Form.Item label="Email" className={style.formItem}>
-          <Input {...register('email', { required: true })} className={style.formInput} />
-          {errors.email && <Alert message="Email is required" type="error" />}
-          {!validateEmail(register('email').value) && <Alert message="Invalid email format" type="error" />}
-        </Form.Item>
-        <Form.Item label="Message" className={style.formItem}>
-          <Input.TextArea {...register('message', { required: true })} className={style.formTextarea} />
-          {errors.message && <Alert message="Message is required" type="error" />}
-        </Form.Item>
-        {errorMessage && <Alert message={errorMessage} type="error" />}
-        <Form.Item>
-          <Button type="primary" htmlType="submit" className={style.formButton}>
-            Submit
-          </Button>
-        </Form.Item>
-        {submitted && <Alert message="Form submitted successfully" type="success" />}
-      </Form>
-    );
-  };
+const Forma = () => {
+  const [submitted, setSubmitted] = useState(false);
+  // eslint-disable-next-line
+  const [errorMessage, setErrorMessage] = useState('');
 
-export default Forma
+  const formik = useFormik({
+    initialValues: {
+      name: '',
+      email: '',
+      message: '',
+    },
+    validationSchema: Yup.object({
+      name: Yup.string().required('Name is required'),
+      email: Yup.string().email('Invalid email format').required('Email is required'),
+      message: Yup.string().required('Message is required'),
+    }),
+    onSubmit: (values) => {
+      // Можете виконати необхідні дії при успішному відправленні форми тут
+      setSubmitted(true);
+    },
+  });
+
+  return (
+    <Form onSubmit={formik.handleSubmit} className={style.formContainer}>
+      <Form.Item label="Imię*" className={style.formItem} validateStatus={formik.errors.name ? 'error' : ''}>
+        <Input {...formik.getFieldProps('name')} className={style.formInput_input} />
+        {formik.touched.name && formik.errors.name && <Alert message={formik.errors.name} type="error" />}
+      </Form.Item>
+
+      <Form.Item label="Email" className={style.formItem} validateStatus={formik.errors.email ? 'error' : ''}>
+        <Input {...formik.getFieldProps('email')} className={style.formInput} />
+        {formik.touched.email && formik.errors.email && <Alert message={formik.errors.email} type="error" />}
+      </Form.Item>
+
+      <Form.Item label="Message" className={style.formItem} validateStatus={formik.errors.message ? 'error' : ''}>
+        <Input.TextArea {...formik.getFieldProps('message')} className={style.formTextarea} />
+        {formik.touched.message && formik.errors.message && <Alert message={formik.errors.message} type="error" />}
+      </Form.Item>
+
+      {errorMessage && <Alert message={errorMessage} type="error" />}
+
+      <Form.Item>
+        <Button type="primary" htmlType="submit" className={style.formButton}>
+          Wyślij
+        </Button>
+      </Form.Item>
+
+      {submitted && <Alert message="Form submitted successfully" type="success" />}
+    </Form>
+  );
+};
+
+export default Forma;
