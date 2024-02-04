@@ -87,6 +87,7 @@ const AboutUs = () => {
         showArrows={false}
         showStatus={false}
         infiniteLoop={true}
+        showThumbs={false}
         style={{ overflow: 'visible' }}
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const indicatorClass = isSelected ? 'dot selected' : 'dot';

@@ -8,6 +8,9 @@ import Reviews from 'components/components/Reviews';
 import React, { useState, useEffect } from 'react';
 
 
+
+
+
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
@@ -38,12 +41,11 @@ const LandingPage = () => {
       <Header isScrolled={isScrolled} toggleBurgerMenu={toggleBurgerMenu} />
       <Hero />
       <AboutUs />
-      
       <Reviews />
       <Contacts />
       <Footer />
 
-       {burgerMenuOpen && <BurgerMenu toggleBurgerMenu={toggleBurgerMenu} />}
+      {burgerMenuOpen && <BurgerMenu toggleBurgerMenu={toggleBurgerMenu} />}
     </div>
   );
 };
