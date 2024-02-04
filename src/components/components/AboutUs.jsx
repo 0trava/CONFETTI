@@ -21,6 +21,9 @@ const AboutUs = () => {
         </p>
       </div>
 
+
+
+      {/* List */}
       <div className={style.list}>
         {/* 1 */}
         <div className={style.item}>

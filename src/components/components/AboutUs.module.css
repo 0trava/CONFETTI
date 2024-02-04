@@ -64,8 +64,7 @@
 /* box */
 
 .list {
-    display: grid;
-    display: flex;
+    display: none;
     gap: 24px;
     flex-wrap: wrap;
     justify-content: center;
@@ -174,6 +173,14 @@
 
 /* Tablet */
 @media screen and (min-width: 768px) {
+    .list {
+        display: flex;
+    }
+
+    .carouselCont {
+        display: none;
+    }
+
     .title_box {
         width: 584px;    
     }
