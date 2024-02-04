@@ -20,10 +20,14 @@ const Contacts = () => {
         {/* Contacts */}
         <ul className={style.contact_list}>
           <li>
-            <p>+48 793 351 407</p>
+            <a href="tel:+48793351407">
+              <p className={style.link}>+48 793 351 407</p>
+            </a>
           </li>
           <li>
-            <p>confettibalony@gmail.com</p>
+            <a href="mailto:confettibalony@gmail.com">
+              <p className={style.link}>confettibalony@gmail.com</p>
+            </a>
           </li>
         </ul>
       </div>

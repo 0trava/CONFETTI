@@ -43,17 +43,31 @@
     margin-bottom: 88px;
 }
 
-.contact_list li p {
+.contact_list li a p {
     height: 29px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #565148;
 
 
 }
 
 .contact_list li {
     margin-top: 16px;
+}
+
+.link:hover, .link:focus, .link:hover::before , .link:focus::before {
+    color: #ED4B5E;  
+    
+}
+
+.contact_list li:nth-child(1) p:hover::before, .contact_list li:nth-child(1) p:focus::before {
+    background-image: url(../../assets/images/call_hover.svg);
+}
+
+.contact_list li:nth-child(2) p:hover::before, .contact_list li:nth-child(2) p:focus::before {
+    background-image: url(../../assets/images/sms_hover.svg);
 }
 
 
