@@ -27,7 +27,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className={style.container}>
+    <div className={style.container} id="Hero">
       <img className={`${style.bullon_1} parallax`} data-speed="0.2" src={Img_Bullon_1} alt="bullon1" />
       <img className={`${style.bullon_2} parallax`} data-speed="0.3" src={Img_Bullon_2} alt="bullon2" />
       <img className={`${style.background} parallax`} data-speed="0.1" src={Background} alt="background" />

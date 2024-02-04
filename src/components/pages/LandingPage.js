@@ -7,6 +7,7 @@ import Hero from 'components/components/Hero';
 import Reviews from 'components/components/Reviews';
 import React, { useState, useEffect } from 'react';
 
+import { Link as ScrollLink } from 'react-scroll';
 
 
 
@@ -40,9 +41,15 @@ const LandingPage = () => {
     <div>
       <Header isScrolled={isScrolled} toggleBurgerMenu={toggleBurgerMenu} />
       <Hero />
-      <AboutUs />
-      <Reviews />
-      <Contacts />
+      <ScrollLink to="AboutUs" smooth={true} duration={500}>
+        <AboutUs />
+      </ScrollLink>
+      <ScrollLink to="Reviews" smooth={true} duration={500}>
+        <Reviews />
+      </ScrollLink>
+      <ScrollLink to="Contacts" smooth={true} duration={500}>
+        <Contacts />
+      </ScrollLink>
       <Footer />
 
       {burgerMenuOpen && <BurgerMenu toggleBurgerMenu={toggleBurgerMenu} />}

@@ -10,7 +10,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const AboutUs = () => {
   return (
-    <div className={style.container}>
+    <div className={style.container}  id="AboutUs">
       <div className={style.title_box}>
         <h2 className={style.title}>
           kreatywny zespół <br /> dekoratorów

@@ -10,7 +10,7 @@ import { Carousel } from 'react-responsive-carousel';
 
 const Reviews = () => {
   return (
-    <div className={style.container}>
+    <div className={style.container}  id="Reviews">
         <h2 className={style.title}>
         Recenzje
         </h2>

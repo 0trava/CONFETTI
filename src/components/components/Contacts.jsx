@@ -4,7 +4,7 @@ import Forma from './Forma';
 
 const Contacts = () => {
   return (
-    <div className={style.container}>
+    <div className={style.container}  id="Contacts">
       <div className={style.contact_box}>
         {/* title */}
         <h2 className={style.title}>Kontakty</h2>
