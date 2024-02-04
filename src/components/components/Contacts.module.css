@@ -153,6 +153,23 @@
     transform: rotate(-9deg);
 }
 
+@keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .ballon1,
+  .ballon2 {
+    animation: floatAnimation 3s ease-in-out infinite;
+  }
+
 }
 
 
