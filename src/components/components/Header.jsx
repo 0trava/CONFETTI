@@ -8,6 +8,8 @@ import MenuFull_hover from '../../assets/images/menu_hover.png';
 import MenuIcon from '../../assets/images/menu_icon.png';
 import MenuIcon_hover from '../../assets/images/menu_icon_hover.png';
 
+import { Link as ScrollLink } from 'react-scroll';
+
 const Header = ({ toggleBurgerMenu }) => {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -27,9 +29,11 @@ const Header = ({ toggleBurgerMenu }) => {
   return (
     <div className={`${style.container} ${isScrolled ? style.scrolled : ''}`}>
       {/* Logo */}
-      {!isScrolled ? (<a href="/" className={style.logo_link}>
+      {!isScrolled ? 
+      (<ScrollLink to="Hero" smooth={true} duration={500} className={style.logo_link}>
         <img className={style.logo} src={Logo} alt="logo" />
-      </a>) : (<div/>)}
+      </ScrollLink>
+  ) : (<div/>)}
 
       {/* Menu */}
       <div onClick={toggleBurgerMenu} className={style.menu__full_box}>

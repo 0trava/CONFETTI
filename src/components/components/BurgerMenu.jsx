@@ -19,6 +19,7 @@ const BurgerMenu = ({ toggleBurgerMenu }) => {
         <ScrollLink to="Hero" smooth={true} duration={500} className={style.logo_link} onClick={handleLinkClick}>
           <img className={style.logo} src={Logo} alt="logo" />
         </ScrollLink>
+        
 
         {/* Btn close */}
         <button className={style.close_button} onClick={toggleBurgerMenu}>
