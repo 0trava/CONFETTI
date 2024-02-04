@@ -9,6 +9,7 @@
   width: 100vw;
 
   margin-bottom: 100px;
+  margin-top: 80px;
 
 }
 
@@ -110,16 +111,12 @@
 }
 
 
-/* React Responsive Carousel ---------------------------------------*/
+/* React Responsive Carousel MOBILE---------------------------------------*/
 
 
 .carouselContainer {
     width: 320px; /* Задайте ширину */
     margin: 0 auto; /* Центрує по горизонталі */
-}
-
-.carouselCont {
-    position: relative;
 }
 
 .carouselContainer .item {

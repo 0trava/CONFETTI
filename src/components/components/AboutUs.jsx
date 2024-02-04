@@ -86,6 +86,7 @@ const AboutUs = () => {
         className={`${style.carouselContainer} ${style.customCarousel}`}
         showArrows={false}
         showStatus={false}
+        infiniteLoop={true}
         style={{ overflow: 'visible' }}
         renderIndicator={(onClickHandler, isSelected, index, label) => {
           const indicatorClass = isSelected ? 'dot selected' : 'dot';
