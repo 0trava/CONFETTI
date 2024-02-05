@@ -19,15 +19,15 @@ const Contacts = () => {
 
         {/* Contacts */}
         <ul className={style.contact_list}>
-          <li>
-            <a href="tel:+48793351407">
-              <p className={style.link}>+48 793 351 407</p>
-            </a>
+        <li>
+            <div onClick={() => window.location.href = 'tel:+48793351407' }>
+             <p className={style.link}> +48 793 351 407</p>
+            </div>
           </li>
           <li>
-            <a href="mailto:confettibalony@gmail.com">
+            <div href="mailto:confettibalony@gmail.com" className={style.link}>
               <p className={style.link}>confettibalony@gmail.com</p>
-            </a>
+            </div>
           </li>
         </ul>
       </div>

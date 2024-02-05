@@ -9,9 +9,6 @@ import React, { useState, useEffect } from 'react';
 
 import { Link as ScrollLink } from 'react-scroll';
 
-
-
-
 const LandingPage = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [burgerMenuOpen, setBurgerMenuOpen] = useState(false);
@@ -31,7 +28,7 @@ const LandingPage = () => {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [burgerMenuOpen]);
 
   const toggleBurgerMenu = () => {
     setBurgerMenuOpen(!burgerMenuOpen);
@@ -40,16 +37,14 @@ const LandingPage = () => {
   return (
     <div>
       <Header isScrolled={isScrolled} toggleBurgerMenu={toggleBurgerMenu} />
+      <ScrollLink to="Hero" smooth={true} duration={500}></ScrollLink>
       <Hero />
-      <ScrollLink to="AboutUs" smooth={true} duration={500}>
-        <AboutUs />
-      </ScrollLink>
-      <ScrollLink to="Reviews" smooth={true} duration={500}>
-        <Reviews />
-      </ScrollLink>
-      <ScrollLink to="Contacts" smooth={true} duration={500}>
-        <Contacts />
-      </ScrollLink>
+      <ScrollLink to="AboutUs" smooth={true} duration={500}></ScrollLink>
+      <AboutUs />
+      <ScrollLink to="Reviews" smooth={true} duration={500}></ScrollLink>
+      <Reviews />
+      <ScrollLink to="Contacts" smooth={true} duration={500}></ScrollLink>
+      <Contacts />
       <Footer />
 
       {burgerMenuOpen && <BurgerMenu toggleBurgerMenu={toggleBurgerMenu} />}

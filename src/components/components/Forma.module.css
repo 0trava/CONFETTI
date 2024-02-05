@@ -1,55 +1,116 @@
-.formContainer {
-
-  }
-  
-  .formItem {
-    margin-bottom: 32px;
+/* .formContainer {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+
+
+  } */
+  
+  .formItem {
+    max-width: 320px;
+    /* margin-left: 24px; */
+    margin-top: 24px !important;
+
+  }
+
+  .formItemTextarea {
+    height: 128px;
+  }
+
+  .formItem label {
+    color: rgba(148, 148, 148, 1) !important;
+    font-family: Inter!important;
+    font-size: 16px!important;
+    font-weight: 500!important;
+    line-height: 19px!important;
+    letter-spacing: -0.01em!important;
+    padding-left: 24px;
+
+  }
+
+  .formItem div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    color: rgba(148, 148, 148, 1);
+
+
 
   }
   
   .formInput {
     width: 100%;
-    padding: 10px;
-    border-radius: 5px;
+    /* padding: 10px; */
+    /* border-radius: 5px; */
     border: 1px solid #ddd;
     box-sizing: border-box;
+
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-radius: 9px;
+    border: 1px solid rgba(210, 210, 210, 1);
+
   }
   
   .formTextarea {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
+    max-width: 320px;
+    height: 128px;
     border: 1px solid #ddd;
     box-sizing: border-box;
+
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-radius: 9px;
+    border: 1px solid rgba(210, 210, 210, 1);
     resize: vertical;
   }
   
   .formButton {
-    width: 443px;
-    height: 80px;
+    width: 320px;
+    height: 62px;
     padding: 24px, 32px, 24px, 32px;
     border-radius: 24px;
     gap: 10px;
     background: #ED4B5E;
 
+    margin-top: 24px !important;
+
     
     cursor: pointer;
 
     font-family: Anzeigen-Grotesk;
-    font-size: 40px;
+    font-size: 28px;
     font-weight: 500;
-    line-height: 32px;
+    line-height: 22px;
     letter-spacing: -0.01em;
     text-align: center;
 
+    transition: all 0.3s linear;
+
+
+
   }
 
-.ant-btn.ant-btn-primary.css-dev-only-do-not-override-1rqnfsa:hover {
-      background-color: #ff0000 !important;
-      color: #000 !important;
+  .formButton:hover {
+      background-color: #da384b !important;
+      scale: 1.01;
   }
 
 
