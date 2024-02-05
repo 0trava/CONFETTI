@@ -27,7 +27,6 @@ const Forma = () => {
     }),
     onSubmit: (values) => {
       console.log('Submitting:', values);
-      // Ваша логіка для обробки відправленої форми
       alert('Форма успішно відправлена. Все гаразд!');
       setSubmitted(true);
     },
