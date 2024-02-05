@@ -21,6 +21,7 @@ const Forma = () => {
       message: Yup.string().required('Message is required'),
     }),
     onSubmit: (values) => {
+      console.log('Submitting:', values);
       // Можете виконати необхідні дії при успішному відправленні форми тут
       setSubmitted(true);
     },
