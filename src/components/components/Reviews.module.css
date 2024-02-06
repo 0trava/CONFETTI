@@ -16,7 +16,7 @@
 
     font-family: Anzeigen-Grotesk;
     text-transform: uppercase;
-    color:  #ED4B5E;  
+    color:  var(--accent-color);  
 
     margin-bottom: 24px;
     margin-top: 80px;
@@ -53,7 +53,7 @@
     line-height: 29px;
     letter-spacing: -0.01em;
     text-align: left;
-    color: #222222;
+    color: var(--main-color);
     /* display: flex; */
 
 }
@@ -65,7 +65,7 @@
     line-height: 19px;
     letter-spacing: -0.01em;
     text-align: left;
-    color: #222222;
+    color: var(--main-color);
     position: relative;
     margin-left: 32px;
 
@@ -184,9 +184,8 @@
 .carouselContainer .item__desk{
     width: 346px;
     height: 220px;
-    padding: 24px;
     border-radius: 24px;
-    margin-right: 24px;
+    /* margin-right: 24px; */
     
     padding-top: 24px;
     padding-bottom: 24px;
@@ -260,12 +259,17 @@
     border: none!important;
  }
 
- /* .carouselContainerTablet li {
-    min-width: 400px !important;
+ .carouselContainerTablet li {
+    min-width: 390px !important;
     width: 346px !important;
     margin-right: 24px!important;
 
- } */
+ }
+
+ .carouselContainerTablet ul {
+    display: flex;
+    align-items: flex-start;
+ }
 
 
 
@@ -279,6 +283,10 @@
 
     .carouselCont {
         display: none;
+    }
+
+    .container {
+        margin-bottom: 80px;
     }
 
 }
@@ -295,5 +303,19 @@
     .carouselTablet {
         display: none;
     }
+
+    .container {
+        /* display: flex;
+        flex-direction: row;
+        justify-content: space-around; */
+        padding-left: 112px;
+        padding-right: 112px;
+    }
+
+    .container {
+        margin-bottom: 200px;
+
+    }
+
 
 }

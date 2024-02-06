@@ -32,22 +32,22 @@
 }
 
 .contact_list {
-    font-family: Inter;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 29px;
-    letter-spacing: -0.01em;
-    text-align: center;
-    color: var(--extra-text-color);
+    gap: 16px;
 
     margin-bottom: 88px;
 }
 
 .contact_list li div p {
-    height: 29px;
+    /* height: 29px; */
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.01em;
+    text-align: center;    
     color: var(--extra-text-color);
 
     transition: all 0.3s linear;
@@ -154,24 +154,39 @@
     height: 349px;
     top: 157px;
     right: -109px;
-    transform: rotate(-9deg);
+    transform: rotate(40deg);
 }
 
-@keyframes floatAnimation {
+@keyframes floatAnimation1 {
+    0% {
+      transform:  rotate(-40deg) translateY();
+    }
+    50% {
+      transform:  rotate(-40deg) translateY(-40px) translateX(40px);
+    }
+    100% {
+      transform:  rotate(-40deg) translateY(0);
+    }
+  }
+
+  @keyframes floatAnimation2 {
     0% {
       transform: translateY(0);
     }
     50% {
-      transform: translateY(-40px);
+      transform:  translateY(-40px);
     }
     100% {
       transform: translateY(0);
     }
   }
   
-  .ballon1,
+  .ballon1{
+    animation: floatAnimation1 3s ease-in-out infinite;
+  }
+
   .ballon2 {
-    animation: floatAnimation 3s ease-in-out infinite;
+    animation: floatAnimation2 3s ease-in-out infinite;
   }
 
 }
@@ -185,8 +200,53 @@
     .container {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        padding-left: 112px;
+        padding-right: 112px;
     }
+
+    .contact_box {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 100px;
+        line-height: 79px;
+        margin-bottom: 54px;
+
+    }
+
+    .post_title {
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 38px;
+        letter-spacing: -0.01em;
+        text-align: left;
+        margin-bottom: 32px;
+
+    }
+
+    .contact_list {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+
+    }
+
+    .contact_list li div p {
+
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        color: var(--main-color);
+    }
+
+    .contact_list li:nth-child(1) p::before, .contact_list li:nth-child(2) p::before  {
+        fill: var(--main-color);
+
+       }
 
 }
 

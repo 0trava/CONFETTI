@@ -47,7 +47,7 @@ const Reviews = () => {
         centerSlidePercentage={50}  // Вказує розмір активного слайда відносно інших слайдів
         emulateTouch={true}  
         infiniteLoop={true} 
-        selectedItem={0.5} 
+        selectedItem={2}
       >
           <div className={style.item__desk}>
               <p  className={style.item__review}>Baaardzo super ścianka  , dziękuję za <span>współpracę</span></p>
