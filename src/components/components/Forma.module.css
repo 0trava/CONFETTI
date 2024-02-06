@@ -26,14 +26,31 @@
     flex-direction: column;
     width: 100%;
 
-    font-family: Inter;
+    /* font-family: Inter;
     font-size: 16px;
     font-weight: 500;
     line-height: 19px;
     letter-spacing: -0.01em;
     text-align: left;
-    color: rgba(148, 148, 148, 1);
+    color: rgba(148, 148, 148, 1); */
+    color:  #ED4B5E !important;
 
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: -0.01em;
+    text-align: right;
+    /* padding-right: 24px !important; */
+    border: none;
+    padding-top: 8px;
+
+
+
+  }
+
+  .formItem div  div div:nth-child(2) {
+    padding-right: 24px !important;
   }
   
   .formInput {
@@ -48,7 +65,23 @@
 
     border-radius: 9px;
     border: 1px solid rgba(210, 210, 210, 1);
+    
 
+  }
+
+  .errorInput {
+    width: 100%;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    border-radius: 9px;
+    border: 1px solid rgba(210, 210, 210, 1);
+    color: #ED4B5E !important;
   }
   
   .formTextarea {
@@ -96,6 +129,22 @@
   .formButton:hover {
       background-color: #da384b !important;
       scale: 1.01;
+  }
+
+  /* Alert */
+
+  .ant-alert-message {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 17px;
+    letter-spacing: -0.01em;
+    text-align: right;
+    color:  #ED4B5E !important;
+
+  }
+
+  .errorText { /* Колір тексту для помилок */
   }
 
 

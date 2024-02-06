@@ -17,16 +17,18 @@ const Forma = () => {
       name: Yup.string()
         .matches(/^[a-zA-Z\s]+$/, 'Nieprawidłowe Іmię')
         .required('Nieprawidłowe Іmię'),
-      email: Yup
-        .string()
+      email: Yup.string()
         .max(254)
-        .matches(
-          emailRegExp,
-          'Nieprawidłowy email'
-        )
+        .matches(emailRegExp, 'Nieprawidłowy email')
         .required('Nieprawidłowy email'),
       message: Yup.string(),
     }),
+    onSubmit: values => {
+      console.log('Submitting:', values);
+      alert('Форма успішно відправлена. Все гаразд!');
+      setSubmitted(true);
+      formik.resetForm(); // Очищення форми
+    },
   });
 
   const handleChange = event => {
@@ -34,85 +36,101 @@ const Forma = () => {
     const value = event.target.value;
     setInputs(values => ({ ...values, [name]: value }));
     setFieldErrors(errors => ({ ...errors, [name]: '' }));
+
+    console.log('write:', inputs);
   };
 
-  const btnSubmit = async (e) => {
+  const btnSubmit = async e => {
     e.preventDefault();
-  
+
     // Оновлення inputs перед валідацією
-    setInputs((prevInputs) => ({ ...prevInputs }));
-  
+    setInputs(prevInputs => ({ ...prevInputs }));
+
     // Зачекати на оновлення inputs
-    await new Promise((resolve) => setTimeout(resolve, 0));
-  
+    await new Promise(resolve => setTimeout(resolve, 0));
+
     formik.setValues(inputs);
-  
     formik.submitForm(); // Використовуйте submitForm() замість handleSubmit()
-  
+
     // Зачекати на завершення операції submitForm()
-    await new Promise((resolve) => setTimeout(resolve, 0));
-  
-    formik.validateForm().then((errors) => {
+    await new Promise(resolve => setTimeout(resolve, 0));
+
+    formik.validateForm().then(errors => {
       console.log('Validation errors:', errors);
       setFieldErrors(errors);
       if (Object.keys(errors).length === 0) {
-        // alert('Форма успішно відправлена. Все гаразд!');
+        alert('Form successfully submitted');
         setSubmitted(true);
         setInputs({});
-      } else {
+        formik.resetForm(); // Очищення форми
+        setFieldErrors(errors);
+      } 
+      else {
         // alert('Будь ласка, перевірте поля форми на наявність помилок.');
+        console.log('Test:', inputs);
       }
     });
   };
 
   return (
-<Form className={style.formContainer}>
-  <Form.Item
-  label="Imię*"
-  className={style.formItem}
-  validateStatus={fieldErrors.name ? 'error' : ''}
-  help={fieldErrors.name}
+    <Form className={style.formContainer}>
+      <Form.Item
+        label="Imię*"
+        className={style.formItem}
+        validateStatus={fieldErrors.name ? 'error' : ''}
+        help={fieldErrors.name}
+      >
+        <Input
+          {...formik.getFieldProps('name')}
+          className={`${style.formInput} ${fieldErrors.name ? style.errorInput : ''}`}
+          onChange={handleChange} // Додайте onChange
+          value={inputs.name}
+          placeholder="Imię"
+        />
+        {fieldErrors.name && (
+          <Alert
+            message={fieldErrors.name}
+            className={style.alert}
+            type="error"
+          />
+        )}
+      </Form.Item>
 
->
-  <Input
-    {...formik.getFieldProps('name')}
-    className={style.formInput}
-    onChange={handleChange}  // Додайте onChange
-    placeholder="Imię"
-  />
-</Form.Item>
+      <Form.Item
+        label="Email*"
+        className={style.formItem}
+        validateStatus={fieldErrors.email ? 'error' : ''}
+        help={fieldErrors.email}
+      >
+        <Input
+          {...formik.getFieldProps('email')}
+          className={`${style.formInput} ${fieldErrors.email ? style.errorInput : ''}`}
+          onChange={handleChange} // Додайте onChange
+          placeholder="mail@gmail.com"
+          value={inputs.email}
+        />
+        {fieldErrors.email && (
+          <Alert message={fieldErrors.email} type="error" />
+        )}
+      </Form.Item>
 
-<Form.Item
-  label="Email*"
-  className={style.formItem}
-  validateStatus={fieldErrors.email ? 'error' : ''}
-  help={fieldErrors.email}
->
-  <Input
-    {...formik.getFieldProps('email')}
-    className={style.formInput}
-    onChange={handleChange}  // Додайте onChange
-    placeholder="mail@gmail.com"
-  />
-</Form.Item>
+      <Form.Item
+        label="Message"
+        className={`${style.formItem} ${style.formItemTextarea}`}
+        validateStatus={fieldErrors.message ? 'error' : ''}
+        help={fieldErrors.message}
+      >
+        <Input.TextArea
+          {...formik.getFieldProps('message')}
+          className={style.formTextarea}
+          onChange={handleChange} // Додайте onChange
+          placeholder="Twoja wiadomość..."
+          rows={3}
+          value={inputs.message}
+        />
+      </Form.Item>
 
-<Form.Item
-  label="Message"
-  className={`${style.formItem} ${style.formItemTextarea}`}
-  validateStatus={fieldErrors.message ? 'error' : ''}
-  help={fieldErrors.message}
->
-  <Input.TextArea
-    {...formik.getFieldProps('message')}
-    className={style.formTextarea}
-    onChange={handleChange}  // Додайте onChange
-    placeholder="Twoja wiadomość..."
-    rows={3}
-  />
-</Form.Item>
-
-
-{/* Button */}
+      {/* Button */}
       <Form.Item>
         <Button
           type="primary"
@@ -124,9 +142,6 @@ const Forma = () => {
         </Button>
       </Form.Item>
 
-      {submitted && (
-        <Alert message="Form submitted successfully" type="success" />
-      )}
     </Form>
   );
 };
