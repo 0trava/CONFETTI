@@ -1,6 +1,6 @@
 .container {
-    padding-left: 112px;
-    padding-right: 112px;
+    padding-left: calc(( 100vw - 1200px ) / 2);
+    padding-right: calc(( 100vw - 1200px ) / 2);
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -41,6 +41,8 @@
   
   .list .item:nth-child(2) {
     background-color: var(--background-color-about-1);
+    margin-right: 0px;
+
   }
   
   .list .item:nth-child(3) {
@@ -49,6 +51,7 @@
   
   .list .item:nth-child(4) {
     background-color: var(--background-color-about-3);
+    margin-right: 0px;
   }
   
   .list {
@@ -181,7 +184,24 @@
       margin-top: 24px;
       margin-bottom: 64px;
     }
+
+    .container {
+        padding-left: calc(( 100vw - 1300px ) / 2);
+        padding-right: calc(( 100vw - 1300px ) / 2);
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        margin-bottom: 100px;
+        margin-top: 80px;
+      }
   }
+
+
+
+
+
   
   .slider_section {
     padding: 20px;
