@@ -8,6 +8,7 @@ import style from './Forma.module.css';
 const emailRegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 const Forma = () => {
+  // eslint-disable-next-line
   const [submitted, setSubmitted] = useState(false);
   const [fieldErrors, setFieldErrors] = useState({});
   const [inputs, setInputs] = useState({});

@@ -201,8 +201,9 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding-left: 112px;
-        padding-right: 112px;
+        padding-left: calc(( 100vw - 1200px ) / 2);
+        padding-right: calc(( 100vw - 1200px ) / 2);
+        overflow: hidden;
     }
 
     .contact_box {
