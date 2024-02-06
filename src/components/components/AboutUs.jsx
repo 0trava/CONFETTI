@@ -9,6 +9,8 @@ import { Carousel } from 'react-responsive-carousel';
 
 
 const AboutUs = () => {
+
+
   return (
     <div className={style.container}  id="AboutUs">
       <div className={style.title_box}>
@@ -23,7 +25,7 @@ const AboutUs = () => {
 
 
 
-      {/* List */}
+      {/* List Desktop */}
       <div className={style.list}>
         {/* 1 */}
         <div className={style.item}>
@@ -80,7 +82,7 @@ const AboutUs = () => {
         </div>
       </div>
 
-      {/* carousel -------------------------------------- */}
+      {/* Carousel  mobile*/}
       <div className={`${style.carouselCont}`}>
       <Carousel
         className={`${style.carouselContainer} ${style.customCarousel}`}

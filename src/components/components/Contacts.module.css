@@ -14,7 +14,7 @@
 
     font-family: Anzeigen-Grotesk;
     text-transform: uppercase;
-    color:  #ED4B5E;  
+    color:  var(--accent-color);  
 
     margin-bottom: 24px;
     margin-top: 80px;
@@ -28,7 +28,7 @@
     line-height: 29px;
     letter-spacing: -0.01em;
     text-align: center;
-    color:  #222222; 
+    color:  var(--main-color); 
 }
 
 .contact_list {
@@ -38,7 +38,7 @@
     line-height: 29px;
     letter-spacing: -0.01em;
     text-align: center;
-    color: #565148;
+    color: var(--extra-text-color);
 
     margin-bottom: 88px;
 }
@@ -48,7 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #565148;
+    color: var(--extra-text-color);
 
     transition: all 0.3s linear;
 
@@ -60,7 +60,7 @@
 }
 
 .link:hover, .link:focus, .link:hover::before , .link:focus::before {
-    color: #ED4B5E;  
+    color:  var(--accent-color);  
     
 }
 
@@ -80,7 +80,7 @@
  background-size: cover;
  width: 24px;
  height: 24px;
- fill: #565148;
+ fill: var(--extra-text-color);
  margin-right: 8px; 
  display: inline-block;
 
@@ -93,7 +93,7 @@
     background-size: cover;
     width: 24px;
     height: 24px;
-    fill: #565148;
+    fill: var(--extra-text-color);
     margin-right: 8px; 
     display: inline-block;
 
@@ -108,7 +108,7 @@
     align-items: center;
     height: 569px;
     padding: 51px, 20px, 51px, 20px;
-    background: #FFEFF0;
+    background: var(--extra-accent-color);
 
     margin-top: 36px;
 }
@@ -122,7 +122,7 @@
     height: 634px;
     padding: 57px, 83px, 56px, 82px;
     border-radius: 24px;    
-    background: #FFEFF0;
+    background: var(--extra-accent-color);
     z-index: 3;
     margin: 0;
     position: relative;
@@ -134,7 +134,6 @@
     background-image: url('../../assets/images/hero_ballons1_desk.png');
     background-size: cover;
     z-index: 1;
-    /* overflow: visible; */
 
     width: 412.44px;
     height: 419.77px;
@@ -150,7 +149,6 @@
     background-image: url('../../assets/images/hero_ballons2_desk.png');
     background-size: cover;
     z-index: 1;
-    /* overflow: visible; */
 
     width: 343px;
     height: 349px;

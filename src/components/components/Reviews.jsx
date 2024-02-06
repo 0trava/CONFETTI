@@ -44,7 +44,7 @@ const Reviews = () => {
         style={{ overflow: 'visible' }}
         showThumbs={false}
         centerMode={true}  // Центрує активний слайд
-        centerSlidePercentage={51}  // Вказує розмір активного слайда відносно інших слайдів
+        centerSlidePercentage={50}  // Вказує розмір активного слайда відносно інших слайдів
         emulateTouch={true}  
         infiniteLoop={true} 
         selectedItem={0.5} 
