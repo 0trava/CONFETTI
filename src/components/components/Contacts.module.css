@@ -3,6 +3,7 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .title {
@@ -195,14 +196,14 @@
 
 
 /* Desktop */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
 
     .container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        padding-left: calc(( 100vw - 1200px ) / 2);
-        padding-right: calc(( 100vw - 1200px ) / 2);
+        padding-left: calc(( 100vw - 1280px ) / 2);
+        padding-right: calc(( 100vw - 1280px ) / 2);
         overflow: hidden;
     }
 

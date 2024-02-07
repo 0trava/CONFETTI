@@ -69,11 +69,11 @@
 
 
 /* Desktop */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1280px) {
     .container {
         margin-top: 37px;
-        padding-left: calc(( 100vw - 1200px ) / 2);
-        padding-right: calc(( 100vw - 1200px ) / 2);
+        padding-left: calc(( 100vw - 1280px ) / 2);
+        padding-right: calc(( 100vw - 1280px ) / 2);
         width: 100%;
         /* width: 1200px; */
     }
