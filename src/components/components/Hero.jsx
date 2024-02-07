@@ -12,10 +12,10 @@ const Hero = () => {
       const scrollValue = window.scrollY;
       const parallaxElements = document.querySelectorAll('.parallax');
 
-      parallaxElements.forEach((element) => {
+      parallaxElements.forEach(element => {
         const speed = parseFloat(element.getAttribute('data-speed')) || 0.5;
         const translateY = scrollValue * speed;
-        element.style.transform = `translateY(${translateY}px)`;
+        element.style.transform = `translateY(${translateY}px )`;
       });
     };
 
@@ -28,15 +28,31 @@ const Hero = () => {
 
   return (
     <div className={style.container} id="Hero">
-      <img className={`${style.bullon_1} parallax`} data-speed="0.2" src={Img_Bullon_1} alt="bullon1" />
-      <img className={`${style.bullon_2} parallax`} data-speed="0.3" src={Img_Bullon_2} alt="bullon2" />
-      <img className={`${style.background} parallax`} data-speed="0.1" src={Background} alt="background" />
+      <img
+        className={`${style.bullon_1} parallax`}
+        data-speed="0.2"
+        src={Img_Bullon_1}
+        alt="bullon1"
+      />
+      <img
+        className={`${style.bullon_2} parallax`}
+        data-speed="0.3"
+        src={Img_Bullon_2}
+        alt="bullon2"
+      />
+      <img
+        className={`${style.background} parallax`}
+        data-speed="0.1"
+        src={Background}
+        alt="background"
+      />
 
       <div className={style.title_box}>
         <h1 className={style.title}>
           Tworzymy unikalne <br />
           i niepowtarzalne <br />
-          <span> dekoracje balonowe</span> <br />na imprezy
+          <span> dekoracje balonowe</span> <br />
+          na imprezy
         </h1>
       </div>
     </div>

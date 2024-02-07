@@ -15,7 +15,7 @@
     letter-spacing: -0.01em;
     text-align: center;
 
-    font-family: Anzeigen-Grotesk;
+    font-family: Anzeigen-Grotesk, sans-serif;
     text-transform: uppercase;
     color:  var(--accent-color);  
 
@@ -60,7 +60,7 @@
 }
 
 .item__user {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 19px;
@@ -125,7 +125,7 @@
 }
 
 .carouselContainerMob .item__review {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 23px;
@@ -194,7 +194,7 @@
 }
 
 .carouselContainer .item__review {
-    font-family: Inter;
+    font-family: Inter, sans-serif;
     font-size: 18px;
     font-weight: 500;
     line-height: 23px;
@@ -308,10 +308,6 @@
     .container {
         padding-left: calc(( 100vw - 1280px ) / 2);
         padding-right: calc(( 100vw - 1280px ) / 2);
-    }
-
-    .container {
-        margin-bottom: 200px;
 
     }
 

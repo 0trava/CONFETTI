@@ -25,7 +25,7 @@ const Contacts = () => {
             </div>
           </li>
           <li>
-            <div href="mailto:confettibalony@gmail.com" className={style.link}>
+            <div onClick={() => window.location.href = 'mailto:confettibalony@gmail.com'} className={style.link}>
               <p className={style.link}>confettibalony@gmail.com</p>
             </div>
           </li>

@@ -86,7 +86,7 @@ li {
 }
 
 .list li {
-  font-family: Anzeigen-Grotesk;
+  font-family: Anzeigen-Grotesk, sans-serif;
   text-transform: uppercase;
   color: var(--main-color);
   margin-top: 24px;

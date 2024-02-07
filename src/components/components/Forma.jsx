@@ -25,8 +25,7 @@ const Forma = () => {
       message: Yup.string(),
     }),
     onSubmit: values => {
-      console.log('Submitting:', values);
-      alert('Форма успішно відправлена. Все гаразд!');
+      alert('Form successfully submitted.!');
       setSubmitted(true);
       formik.resetForm(); // Очищення форми
     },
@@ -37,8 +36,6 @@ const Forma = () => {
     const value = event.target.value;
     setInputs(values => ({ ...values, [name]: value }));
     setFieldErrors(errors => ({ ...errors, [name]: '' }));
-
-    console.log('write:', inputs);
   };
 
   const btnSubmit = async e => {
@@ -57,7 +54,6 @@ const Forma = () => {
     await new Promise(resolve => setTimeout(resolve, 0));
 
     formik.validateForm().then(errors => {
-      console.log('Validation errors:', errors);
       setFieldErrors(errors);
       if (Object.keys(errors).length === 0) {
         alert('Form successfully submitted');
@@ -66,10 +62,6 @@ const Forma = () => {
         formik.resetForm(); // Очищення форми
         setFieldErrors(errors);
       } 
-      else {
-        // alert('Будь ласка, перевірте поля форми на наявність помилок.');
-        console.log('Test:', inputs);
-      }
     });
   };
 
@@ -116,7 +108,7 @@ const Forma = () => {
       </Form.Item>
 
       <Form.Item
-        label="Message"
+        label="Wiadomość"
         className={`${style.formItem} ${style.formItemTextarea}`}
         validateStatus={fieldErrors.message ? 'error' : ''}
         help={fieldErrors.message}
