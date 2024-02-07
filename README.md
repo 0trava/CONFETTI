@@ -1,5 +1,9 @@
 Test work for SoftRyzen page CONFETTI
 
+
+![image](https://github.com/0trava/CONFETTI/assets/102797527/20a82366-2c46-48d2-acad-93e9bee392e7)
+
+
 ***Тестове завдання Frontend
 
 Реалізувати лендінг Confetti відповідно до технічного завдання. 
